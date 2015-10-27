@@ -277,6 +277,7 @@ public class NightscoutUploader {
             json.put("type", "sgv");
             json.put("filtered", record.filtered_data * 1000);
             json.put("unfiltered", record.age_adjusted_raw_value * 1000);
+			json.put("wixelBattery", record.latest_battery_level);
             json.put("rssi", 100);
             json.put("noise", Integer.valueOf(record.noiseValue()));
         }
